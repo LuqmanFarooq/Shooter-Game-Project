@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+
     // == public fields ==
 
+    // this is our player bullet prefab
+    public GameObject PlayerBullet;
+    public GameObject bulletposition1;
     // == private fields ==
     private Rigidbody2D rb;
     private Transform t;
@@ -22,6 +26,14 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // fire bullets when spacebar is pressed
+        if(Input.GetKeyDown("space"))
+        {
+            // instantiate main bullet
+            GameObject mainBullet = (GameObject)Instantiate(PlayerBullet);
+            // set the bullet initial position
+            mainBullet.transform.position = bulletposition1.transform.position;
+        }
         // add horizontal Movement
         float hMovement = Input.GetAxis("Horizontal");
         // if the player presses the up arrow then move
