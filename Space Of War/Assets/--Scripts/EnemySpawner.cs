@@ -49,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
     void ScheduleEnemySpawn()
     {
         float spawnTime;
-
+        maxSpawnRateInSeconds = 5f;
         if (maxSpawnRateInSeconds > 1f)
         {
             // pick a random number between 1 and maxSpawnRateInSeconds
@@ -72,5 +72,11 @@ public class EnemySpawner : MonoBehaviour
         {
             CancelInvoke("IncreaseSpawnRate");
         }
+    }
+    // function to stop enemy spawner 
+    public void stopEnemySpawner()
+    {
+        CancelInvoke("SpawnEnemy");
+        CancelInvoke("IncreaseSpawnRate");
     }
 }

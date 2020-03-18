@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    // refrence to the text ui game object
+    GameObject scoreUIText;
+    // explosion prefab
+    public GameObject Explosion;
     // enemy speed
     float speed;
     // Start is called before the first frame update
@@ -11,6 +15,8 @@ public class EnemyMovement : MonoBehaviour
     {
         // setting speed
         speed = 2f;
+        // get the score text UI
+        scoreUIText = GameObject.FindGameObjectWithTag("ScoreTextTag");
     }
 
     // Update is called once per frame
@@ -33,5 +39,29 @@ public class EnemyMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // detect collision of the enemy ship with the player ship or with player bullet
+        if((collision.tag == "PlayerShipTag") || (collision.tag == "PlayerBulletTag"))
+        {
+            //destroy enemy ship
+            {
+                showExplosion();
+                // add 10 points to the score
+                scoreUIText.GetComponent<GameScore>().Score += 50;
+                // destroy enemy ship
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    // function to instantiate enemy explosion
+    void showExplosion()
+    {
+        GameObject explosion = (GameObject)Instantiate(Explosion);
+
+        // setting the position of explosion
+        explosion.transform.position = transform.position;
     }
 }
