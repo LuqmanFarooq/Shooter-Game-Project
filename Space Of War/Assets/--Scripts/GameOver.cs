@@ -7,10 +7,10 @@ public class GameOver : MonoBehaviour
 {
     public void PlayAgain()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Level 1");
     }
     public void backtomain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("Main Menu");
     }
 }

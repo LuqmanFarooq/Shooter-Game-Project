@@ -26,11 +26,13 @@ public class GameScore : MonoBehaviour
     {
         // Get the Text UI component of this gameObject
         scoreTextUI = GetComponent<Text>();
+        
     }
     // Function to update the score text UI
     void UpdateScoreTextUI()
     {
         string scoreStr = string.Format("{0:0000}",score);
         scoreTextUI.text = scoreStr;
+       
     }
 }
