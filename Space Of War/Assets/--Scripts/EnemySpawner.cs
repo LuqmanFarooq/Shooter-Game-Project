@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
 
     // spawn rate
 
-    float maxSpawnRateInSeconds = 5f;
+    float maxSpawnRateInSeconds = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
     void ScheduleEnemySpawn()
     {
         float spawnTime;
-        maxSpawnRateInSeconds = 5f;
+        maxSpawnRateInSeconds = 2f;
         if (maxSpawnRateInSeconds > 1f)
         {
             // pick a random number between 1 and maxSpawnRateInSeconds

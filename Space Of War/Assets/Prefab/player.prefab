@@ -289,17 +289,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5020235070242141477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae2900ad1a38e0a43a85ef7534e59c06, type: 3}
+  m_Script: {fileID: 11500000, guid: d13c1c7930ee59341a8a3df12d0f9160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawner: {fileID: 0}
   gameOver: {fileID: 0}
   scoreTextUI: {fileID: 0}
-  PlayerBullet: {fileID: 1326648491155902674, guid: cda5dcf02ea44e346aa700941ae57a0f,
-    type: 3}
-  bulletposition1: {fileID: 5020235069757547408}
-  Explosion: {fileID: 7948527939807158340, guid: e51cc71d40829444fbbd22def511b69c,
-    type: 3}
+  PlayerBullet: {fileID: 0}
+  bulletposition1: {fileID: 0}
+  Explosion: {fileID: 0}
   speed: 5
   LivesUIText: {fileID: 0}
   lives: 0

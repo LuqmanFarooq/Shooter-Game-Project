@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyMovement : MonoBehaviour
 {
     // refrence to the text ui game object
     GameObject scoreUIText;
+    
     // explosion prefab
     public GameObject Explosion;
     // enemy speed
@@ -13,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         // setting speed
         speed = 2f;
         // get the score text UI
@@ -48,10 +51,11 @@ public class EnemyMovement : MonoBehaviour
             //destroy enemy ship
             {
                 showExplosion();
-                // add 10 points to the score
+                // add 50 points to the score
                 scoreUIText.GetComponent<GameScore>().Score += 50;
                 // destroy enemy ship
                 Destroy(gameObject);
+                
             }
         }
     }
