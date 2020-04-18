@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 886176463116150774}
   - component: {fileID: 886176463116150775}
   - component: {fileID: 886176463116150772}
-  - component: {fileID: 886176463116150761}
   - component: {fileID: 7356086096919388465}
+  - component: {fileID: -7186316956804914700}
   m_Layer: 0
   m_Name: Level 2 Enemy
   m_TagString: EnemyShipTag
@@ -103,20 +103,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &886176463116150761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886176463116150773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67c87bfb35afe6409f1b623a009b9a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Explosion: {fileID: 3945415954039453369, guid: fce23f558205f3847870ad5f5581dd16,
-    type: 3}
 --- !u!61 &7356086096919388465
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,3 +129,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.34, y: 0.39}
   m_EdgeRadius: 0
+--- !u!114 &-7186316956804914700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886176463116150773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bad2c185614e2b40990b74170dd3230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Explosion: {fileID: 3945415954039453369, guid: fce23f558205f3847870ad5f5581dd16,
+    type: 3}

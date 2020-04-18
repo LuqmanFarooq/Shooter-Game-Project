@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3945415954039453375}
   - component: {fileID: 3945415954039453368}
   - component: {fileID: 3945415954039453373}
-  - component: {fileID: 1899999413251178933}
+  - component: {fileID: 5425432668034067600}
   m_Layer: 0
   m_Name: EnemyExplosion
   m_TagString: Untagged
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dec3e1e3431f5f4d8e73bb9820f04d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &1899999413251178933
+--- !u!82 &5425432668034067600
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
